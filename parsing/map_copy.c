@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:28:28 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/11/19 22:52:31 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 17:40:55 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	**map_copy(int fd)
 
 	map_cpy = ft_strdup("");
 	line = get_next_line(fd);
+	if (line == NULL)
+		exit_empty_map(line, map_cpy);
 	while (line)
 	{
 		tmp = ft_strdup(map_cpy);
@@ -35,4 +37,12 @@ char	**map_copy(int fd)
 		return (0);
 	free (map_cpy);
 	return (map);
+}
+
+void	exit_empty_map(char *line, char *map)
+{
+	free (line);
+	free (map);
+	ft_printf(RED"Error\nMap file is empty\n"NC);
+	exit (0);
 }

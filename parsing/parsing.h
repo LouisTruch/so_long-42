@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:18:01 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/12/01 18:36:10 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 17:40:38 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	map_parsing(char *file);
 int		open_map(char *file);
 int		check_file_extension(char *file);
 char	**map_copy(int fd);
+void	exit_empty_map(char *line, char *map);
 void	make_every_test(char **map, char *file);
 
 /* Functions to make map's basic tests                                        */
