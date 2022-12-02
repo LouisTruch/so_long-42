@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 23:14:32 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/11/19 15:58:44 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:59:43 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	get_game_map(t_game *game, int fd)
 	char	*line;
 	char	*map_cpy;
 	char	*tmp;
-	char	**map;
-	int		map_size;
 
 	map_cpy = ft_strdup("");
 	line = get_next_line(fd);
@@ -64,7 +62,6 @@ void	find_map_collectibles(t_game *game)
 	int	i;
 	int	x;
 	int	y;
-	int	**coll_pos;
 
 	i = 0;
 	x = -1;

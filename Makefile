@@ -6,7 +6,7 @@
 #    By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 15:41:42 by ltruchel          #+#    #+#              #
-#    Updated: 2022/12/01 18:35:35 by ltruchel         ###   ########.fr        #
+#    Updated: 2022/12/02 16:56:20 by ltruchel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS	=	main.c \
 			game/initiate/initialise_map.c \
 			game/load/loading.c \
 			game/load/loading_enemy.c \
+			game/load/loading_screen.c \
 			game/loop/animate_collectible.c \
 			game/loop/animation.c \
 			game/loop/background_replacement.c \
@@ -42,9 +43,9 @@ OBJS	=	${SRCS:.c=.o}
 LIB		=	libft/libft.a \
 			minilibx-linux/libmlx.a
 
-CC	= 	clang
+CC		= 	clang
 
-CFLAGS	=	-g
+CFLAGS	=	-Wall -Wextra -Werror -g
 
 RM		=	rm -f
 

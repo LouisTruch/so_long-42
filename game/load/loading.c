@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 23:37:34 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/11/19 16:11:21 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:43:48 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_load(t_game *game)
 {
 	load_sprites(game);
+	load_waiting_screen(game);
 	load_map_to_window(game);
 	load_enemy(game);
 }
@@ -26,7 +27,7 @@ void	load_sprites(t_game *game)
 	int			length;
 	int			width;
 
-	game->sprite_ptr = ft_calloc(sizeof(void *), 15);
+	game->sprite_ptr = ft_calloc(sizeof(void *), 16);
 	if (!game->sprite_ptr)
 		return ;
 	game->sprite_ptr[0] = mlx_xpm_file_to_image(game->mlx,
@@ -43,6 +44,8 @@ void	load_sprites(t_game *game)
 			"assets/scorebg0.xpm", &length, &width);
 	game->sprite_ptr[5] = mlx_xpm_file_to_image(game->mlx,
 			"assets/enemy.xpm", &length, &width);
+	game->sprite_ptr[15] = mlx_xpm_file_to_image(game->mlx,
+			"assets/loading.xpm", &length, &width);
 	load_collectible_sprites(game, length, width);
 }
 

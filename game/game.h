@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 19:45:29 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/11/30 21:46:10 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:46:02 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	load_sprites(t_game *game);
 void	load_map_to_window(t_game *game);
 void	load_map_to_window_continue(t_game *game, int x, int y);
 void	load_collectible_sprites(t_game *game, int length, int width);
+void	load_waiting_screen(t_game *game);
 
 void	load_enemy(t_game *game);
 void	select_enemy_spawn_location(t_game *game);

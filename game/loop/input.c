@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 00:35:24 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/12/01 16:51:39 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:51:44 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	key_management(int keycode, t_game *game)
 		move_right(game);
 	if (keycode == 65307)
 		ft_exit(game);
-//	system("pactl set-sink-volume @DEFAULT_SINK@ +100dB");
 	check_player_pos_coll(game);
 	check_player_pos_exit(game);
 	if (game->enemy_bool == 1)

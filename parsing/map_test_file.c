@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:59:55 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/12/01 18:02:00 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:58:56 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 int	open_map(char *file)
 {
 	int		fd;
-	int		nb_line;
-	char	**map;
 
 	if (check_file_extension(file) == 0)
 	{

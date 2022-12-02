@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 00:52:25 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/11/19 15:56:30 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 13:29:25 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,5 @@ int	check_enemy_surrounding_up_down(t_game *game)
 	}
 	else
 		game->enemy_moves[1] = 0;
-	check_enemy_surrounding_left_right(game, nb_moves);
+	return (check_enemy_surrounding_left_right(game, nb_moves));
 }

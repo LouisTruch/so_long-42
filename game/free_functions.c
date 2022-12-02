@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 01:33:19 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/12/01 18:40:47 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 17:00:06 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_free_sprite(t_game *game)
 	int	i;
 
 	i = 0;
-	while (i <= 14)
+	while (i <= 15)
 	{
 		mlx_destroy_image(game->mlx, game->sprite_ptr[i]);
 		i++;
@@ -53,8 +53,6 @@ void	ft_free_coll_pos(t_game *game)
 
 int	ft_exit(t_game *game)
 {
-	int	i;
-
 	mlx_loop_end(game->mlx);
 	ft_free_sprite(game);
 	ft_free_coll_pos(game);

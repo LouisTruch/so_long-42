@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 00:39:51 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/11/30 21:49:09 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:52:01 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ void	check_player_pos_exit(t_game *game)
 	if (game->map[game->player_pos[0]][game->player_pos[1]] == 'E')
 	{
 		if (game->collectible == 0)
-		{
-			system("echo '\007'");
 			ft_exit(game);
-		}
 	}
 }
 

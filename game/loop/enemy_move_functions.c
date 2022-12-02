@@ -6,7 +6,7 @@
 /*   By: ltruchel <ltruchel@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 00:50:28 by ltruchel          #+#    #+#             */
-/*   Updated: 2022/11/19 16:52:54 by ltruchel         ###   ########.fr       */
+/*   Updated: 2022/12/02 16:12:52 by ltruchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ void	move_enemy(t_game *game)
 	if (!game->enemy_moves)
 		return ;
 	nb_moves = check_enemy_surrounding_up_down(game);
+	if (nb_moves == 0)
+	{
+		free(game->enemy_moves);
+		return ;
+	}
 	direction = rand() % 4;
 	while (game->enemy_moves[direction] == 0)
 		direction = rand() % 4;
